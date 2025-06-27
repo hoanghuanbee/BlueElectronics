@@ -1,0 +1,19 @@
+﻿@using BlueElectronic.Models
+@model List<Product>
+
+<h2>Danh sách sản phẩm</h2>
+
+<div class="row">
+    @foreach (var item in Model)
+    {
+        <div class="col-md-3 mb-4">
+            <div class="card">
+                <img src="@item.Img1" class="card-img-top" alt="@item.ProductName" />
+                <div class="card-body">
+                    <h5 class="card-title">@item.ProductName</h5>
+                    <p class="card-text">@item.ProductPrice.ToString("N0") VNĐ</p>
+                </div>
+            </div>
+        </div>
+    }
+</div>
